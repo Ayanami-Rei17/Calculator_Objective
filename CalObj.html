@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator</title>
+</head>
+<body>
+
+</body>
+<script>
+
+const cal = {
+  add: function (input1, input2) {
+    return input1 + input2;
+  },
+  subtract: function (input1, input2) {
+    return input1 - input2;
+  },
+  multiply: function (input1, input2) {
+    return input1 * input2;
+  },
+  divide: function (input1, input2) {
+    try {
+      if (input2 === 0) {
+        throw new Error("error");
+      }
+      return input1 / input2;
+    } catch (error) {
+      console.error(error.message);
+    }
+  },
+};
+
+console.log("Add: " + cal.add(10, 6));
+console.log("Subtract: " + cal.subtract(6, 3));
+console.log("Multiplicat: " + cal.multiply(10, 4));
+cal.divide(32, 2);
+
+</script>
+</html>
